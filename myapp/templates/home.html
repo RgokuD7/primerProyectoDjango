@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Mi primera página web con Django</title>
+</head>
+<body>
+    <h1>Bienvenido a mi página web</h1>
+    <p>Esta es una página web simple creada con Django.</p>
+    <a href="{% url 'page1' %}"> PRESIONA AQUÍ </a>
+</body>
+</html>
