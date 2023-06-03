@@ -74,13 +74,24 @@ WSGI_APPLICATION = 'primerproyecto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+import cx_Oracle
+cx_Oracle.init_oracle_client(lib_dir=r"C:/Users/richa/OneDrive/Documentos/Oracle/instantclient_19_19")
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'k02e92tcl4gg9dqe_high',
+        'USER': 'primerProjeto',
+        'PASSWORD': 'A2c9435207m_',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
